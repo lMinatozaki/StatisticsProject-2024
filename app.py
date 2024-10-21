@@ -130,6 +130,7 @@ def calcPercentil(intervals, frecuency, n, A, k):
             return Pk
     return None
 
+#Calcular cuartil
 def calcQuartil(intervals, frecuency, n, A):
     Q1 = calcPercentil(intervals, frecuency, n, A, 25)
     Q2 = calcPercentil(intervals, frecuency, n, A, 50)
@@ -137,10 +138,12 @@ def calcQuartil(intervals, frecuency, n, A):
     Q4 = max(data)
     return Q1, Q2, Q3, Q4
 
+#Calcular curtosis
 def calcKurtosis(P75, P25, P90, P10):
     kurtosis = ((P75 - P25) / (P90 - P10)) * 0.5
     return kurtosis
 
+#Calcular indice de asimetria
 def calcAsymmetryIndex(arithmeticMean, mean, standarDeviation):
     if standarDeviation == 0:
         return float('nan')  #Nao nao division entre 0
