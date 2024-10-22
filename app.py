@@ -225,7 +225,7 @@ def printTable(tableF):
         fi = fila['Fi']
         fa = fila['Fa']
         fsr = fila['Fsr']
-        far = fila.get('Far', 0)
+        far = fila['Far']
         xi = fila['xi']
         fixi = fila['fi.xi']
         fixi2 = fila['fi.xi^2']
